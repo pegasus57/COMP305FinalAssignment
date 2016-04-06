@@ -20,7 +20,7 @@ public class MenuController : MonoBehaviour {
 
     public void StartButtonClick() 
     {
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("Main");
     }
 
     public void InstructionsButtonClick()

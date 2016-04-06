@@ -45,9 +45,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\_Scripts\GameController.cs" />
+     <Compile Include="Assets\_Scripts\HeroController.cs" />
      <Compile Include="Assets\_Scripts\InstructionsController.cs" />
      <Compile Include="Assets\_Scripts\IntroController.cs" />
      <Compile Include="Assets\_Scripts\MenuController.cs" />
+     <None Include="Assets\Editor\SettingsTexturePackerImporter.txt" />
+     <None Include="Assets\codeandweb.com\Readme.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>A:/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
