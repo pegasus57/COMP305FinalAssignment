@@ -8,7 +8,7 @@ public class MenuController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-        SceneManager.LoadScene("Main");
+      
 	}
 	
 	// Update is called once per frame
@@ -31,5 +31,10 @@ public class MenuController : MonoBehaviour {
     public void QuitButtonClick()
     {
         Application.Quit();
+    }
+
+    public void IntroButtonClick()
+    {
+        SceneManager.LoadScene("Intro");
     }
 }
