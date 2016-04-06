@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+﻿using UnityEngine;
+=======
 ﻿/*Source file name:Assignment2
 *Author’s name: Rui Yang
 *Last Modified by:Rui Yang
@@ -23,6 +26,7 @@
 
 
 using UnityEngine;
+>>>>>>> da6b400b15ce00491ed9173c14f430ca3aac8f4f
 using System.Collections;
 // VELOCITY RANGE UTILITY Class +++++++++++++++++++++++
 [System.Serializable]
