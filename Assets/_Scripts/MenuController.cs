@@ -7,7 +7,8 @@ public class MenuController : MonoBehaviour {
     
 	// Use this for initialization
 	void Start () {
-	
+
+        SceneManager.LoadScene("Main");
 	}
 	
 	// Update is called once per frame
