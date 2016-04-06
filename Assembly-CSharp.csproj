@@ -53,6 +53,7 @@
      <None Include="Assets\Editor\SettingsTexturePackerImporter.txt" />
      <None Include="Assets\Scifi Art Demo Pack\Demo Readme.txt" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
+     <None Include="Assets\Fonts\college.txt" />
      <None Include="Assets\codeandweb.com\Readme.txt" />
      <None Include="Assets\Sprites\animations.txt" />
  <Reference Include="UnityEngine.UI">
