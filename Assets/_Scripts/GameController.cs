@@ -4,6 +4,11 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> da6b400b15ce00491ed9173c14f430ca3aac8f4f
 public class GameController : MonoBehaviour
 {
     // PRIVATE INSTANCE VARIABLES
