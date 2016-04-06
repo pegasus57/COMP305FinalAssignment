@@ -84,16 +84,16 @@ public class HeroController: MonoBehaviour {
             1 << LayerMask.NameToLayer("Ground"));
         Debug.DrawLine(this._transform.position, this.groundCheck.position);
 
-<<<<<<< HEAD
+
         if (this._isGrounded)
         {
             Debug.Log("1111");
-=======
+
        
         //if (this._isGrounded)
         //{
         //    Debug.Log("1111");
->>>>>>> a730c647a4dc1b4ce54907762a3411b4a095cfee
+
 
         }
         else
