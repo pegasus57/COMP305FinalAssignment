@@ -44,7 +44,6 @@ public class GameController : MonoBehaviour
             if (this._livesValue <= 0)
             {
                 //this._endGame();
-                this._endGame();
             }
             else
             {

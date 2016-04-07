@@ -1,5 +1,6 @@
 
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 using System.Collections;
 // VELOCITY RANGE UTILITY Class +++++++++++++++++++++++
@@ -178,11 +179,23 @@ public class HeroController: MonoBehaviour {
             this.gameController.ScoreValue += 10;
         }
 
-        //if (other.gameObject.CompareTag("End"))
-        //{
+        if (other.gameObject.CompareTag("End"))
+        {
+            SceneManager.LoadScene("Lvl2");
+            
+           
+        }
+        if (other.gameObject.CompareTag("End2"))
+        {
+            SceneManager.LoadScene("Lvl3");
 
-        //    
-        //    this.player.gameObject.SetActive(false);
+
+        }
+        //if (other.gameObject.CompareTag("Princess"))
+        //{
+        //    SceneManager.LoadScene("GameOver");
+
+
         //}
 
        
@@ -200,6 +213,8 @@ public class HeroController: MonoBehaviour {
             this._DeadSound.Play();
             this.gameController.LivesValue--;
         }
+
+        
     }
 
     //private methods
