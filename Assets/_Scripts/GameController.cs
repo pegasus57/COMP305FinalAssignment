@@ -32,7 +32,7 @@ public class GameController : MonoBehaviour
     //private AudioSource _gameOverSound;
 
 
-
+    
     // PUBLIC ACCESS METHODS
     public int ScoreValue
     {
@@ -61,7 +61,7 @@ public class GameController : MonoBehaviour
             this._livesValue = value;
             if (this._livesValue <= 0)
             {
-                //this._endGame();
+                this._endGame();
             }
             else
             {
@@ -79,6 +79,7 @@ public class GameController : MonoBehaviour
     ////public EnemyController enemy;
     public Text LivesLabel;
     public Text ScoreLabel;
+    public Text HighScoreLabel;
     public Text Good;
     //public Text GameOverLabel2;
     //public PlayerController player;
@@ -125,6 +126,7 @@ public class GameController : MonoBehaviour
 
     private void _endGame()
     {
+        SceneManager.LoadScene("EndScenes");
         //this.GameOverLabel.gameObject.SetActive(true);
         //this.player.gameObject.SetActive(false);
         //this.coin.gameObject.SetActive(false);

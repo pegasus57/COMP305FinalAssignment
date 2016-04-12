@@ -19,9 +19,14 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MenuController : MonoBehaviour {
 
+    public GameController gameController;
+    public Text LivesLabel;
+    public Text ScoreLabel;
+    //public Text HighScoreLabel;
     
 	// Use this for initialization
 	void Start () {
@@ -40,6 +45,7 @@ public class MenuController : MonoBehaviour {
     {
         SceneManager.LoadScene("Lvl1");
     }
+   
 
     public void InstructionsButtonClick()
     {
@@ -51,8 +57,21 @@ public class MenuController : MonoBehaviour {
         Application.Quit();
     }
 
+    public void BackButtonClick()
+    {
+        SceneManager.LoadScene("Menu");
+    }
+
     public void IntroButtonClick()
     {
         SceneManager.LoadScene("Intro");
+    }
+
+    public Text HighScoreLabel;
+    
+    private void HighScoreLabels()
+    {
+        //this.HighScoreLabel.gameObject.SetActive(true);
+       this.HighScoreLabel.text = "High Score: " + gameController.ScoreValue; 
     }
 }
