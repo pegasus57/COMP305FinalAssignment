@@ -212,7 +212,7 @@ public class HeroController: MonoBehaviour {
         
         if (other.gameObject.CompareTag("Princess"))
         {
-            SceneManager.LoadScene("EndScenes");
+            SceneManager.LoadScene("WinScenes");
 
 
         }
