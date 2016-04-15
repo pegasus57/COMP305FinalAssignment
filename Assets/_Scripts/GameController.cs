@@ -27,15 +27,17 @@ public class GameController : MonoBehaviour
     private int _scoreValue;
     private int _livesValue;
 
+    public int _currentScore;
 
     //[SerializeField]
     //private AudioSource _gameOverSound;
 
 
-    
+
     // PUBLIC ACCESS METHODS
     public int ScoreValue
     {
+
         get
         {
             return this._scoreValue;
@@ -61,6 +63,7 @@ public class GameController : MonoBehaviour
             this._livesValue = value;
             if (this._livesValue <= 0)
             {
+                this.LivesLabel.text = "Lives: " + this._livesValue;
                 this._endGame();
             }
             else
@@ -71,7 +74,7 @@ public class GameController : MonoBehaviour
     }
 
 
-    
+
 
 
     //PUBLIC INSTANCE VARIABLES
@@ -90,7 +93,6 @@ public class GameController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
         this._initialize();
         //enemy.gameObject
     }
@@ -98,6 +100,13 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+    }
+
+    void Awake()
+    {
+        
+        DontDestroyOnLoad(gameObject);
 
     }
 
@@ -114,7 +123,7 @@ public class GameController : MonoBehaviour
         //this.Good.gameObject.SetActive(false);
         //this.HighScoreLabel.gameObject.SetActive(false);
         //this.RestartButton.gameObject.SetActive(false);
-        
+
 
 
         //for (int enemyCount = 0; enemyCount < this.enemyNumber; enemyCount++)
@@ -137,6 +146,8 @@ public class GameController : MonoBehaviour
         //this._gameOverSound.Play();
         //this.RestartButton.gameObject.SetActive(true);
     }
+
+
 
 
 

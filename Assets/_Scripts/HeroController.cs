@@ -42,7 +42,8 @@ public class HeroController: MonoBehaviour {
     public Transform groundCheck;
     public Transform camera;
     public GameController gameController;
-
+    public GameObject Bullet;
+    public GameObject BulletPosition;
 
     // PRIVATE INSTANCE VARIABLES
     private Animator _animator;
@@ -57,8 +58,8 @@ public class HeroController: MonoBehaviour {
     private AudioSource _pickupSound;
     private AudioSource _DeadSound;
     private AudioSource _hurtSound;
-
-
+    private GameObject _weapon1;
+    
 
 
 	// Use this for initialization
@@ -67,8 +68,7 @@ public class HeroController: MonoBehaviour {
         // Initialize Public Instance Variables
         this.velocityRange = new VelocityRange(300f, 30000f);
 
-        
-       
+        //this._weapon1.gameObject.SetActive(false);
 
 
         // Intitialize Private Instance Variable
@@ -93,6 +93,18 @@ public class HeroController: MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+
+        if(Input.GetKeyDown("space"))
+        {
+            GameObject bullet = (GameObject)Instantiate(Bullet);
+            bullet.transform.position = BulletPosition.transform.position;
+
+        }
+
+
+
+
+
         Vector3 currentPosition = new Vector3(this._transform.position.x, this._transform.position.y, -10f);
         this.camera.position = currentPosition;
         
@@ -194,6 +206,10 @@ public class HeroController: MonoBehaviour {
             this._pickupSound.Play();
             Destroy(other.gameObject);
             this.gameController.ScoreValue += 10;
+           
+
+
+
         }
 
         if (other.gameObject.CompareTag("End"))
@@ -231,6 +247,10 @@ public class HeroController: MonoBehaviour {
             this._spawn();
             this._DeadSound.Play();
             this.gameController.LivesValue--;
+        }
+        if (other.gameObject.CompareTag("Weapon"))
+        {
+            Destroy(other.gameObject);
         }
 
         

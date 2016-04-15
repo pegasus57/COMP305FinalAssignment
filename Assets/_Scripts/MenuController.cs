@@ -74,4 +74,5 @@ public class MenuController : MonoBehaviour {
         //this.HighScoreLabel.gameObject.SetActive(true);
        this.HighScoreLabel.text = "High Score: " + gameController.ScoreValue; 
     }
+     
 }
