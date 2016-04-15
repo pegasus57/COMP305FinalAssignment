@@ -248,20 +248,21 @@ public class HeroController: MonoBehaviour {
             this._DeadSound.Play();
             this.gameController.LivesValue--;
         }
-<<<<<<< HEAD
+
         if (other.gameObject.CompareTag("SpikedWheel"))
         {
             this._hurtSound.Play();
             this.gameController.LivesValue--;
-=======
+        }
+
         if (other.gameObject.CompareTag("Weapon"))
         {
             Destroy(other.gameObject);
->>>>>>> f0d757bf76dce5b2a545cec2fb9ebe299d083919
+
         }
 
         
-    }
+        }
 
     //private methods
     private void _flip()
