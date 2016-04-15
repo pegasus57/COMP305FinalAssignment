@@ -63,6 +63,7 @@ public class GameController : MonoBehaviour
             this._livesValue = value;
             if (this._livesValue <= 0)
             {
+                this.LivesLabel.text = "Lives: " + this._livesValue;
                 this._endGame();
             }
             else
