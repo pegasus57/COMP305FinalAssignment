@@ -236,6 +236,11 @@ public class HeroController: MonoBehaviour {
             this._DeadSound.Play();
             this.gameController.LivesValue--;
         }
+        if (other.gameObject.CompareTag("SpikedWheel"))
+        {
+            this._hurtSound.Play();
+            this.gameController.LivesValue--;
+        }
 
         
     }

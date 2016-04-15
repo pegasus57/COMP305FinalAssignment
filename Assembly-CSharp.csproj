@@ -51,6 +51,7 @@
      <Compile Include="Assets\_Scripts\InstructionsController.cs" />
      <Compile Include="Assets\_Scripts\IntroController.cs" />
      <Compile Include="Assets\_Scripts\MenuController.cs" />
+     <Compile Include="Assets\_Scripts\SpikedWheelController.cs" />
      <None Include="Assets\Scifi Art Demo Pack\Demo Readme.txt" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\Fonts\college.txt" />
