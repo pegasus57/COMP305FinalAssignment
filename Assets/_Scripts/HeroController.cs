@@ -208,12 +208,14 @@ public class HeroController: MonoBehaviour {
 
 
         }
-        //if (other.gameObject.CompareTag("Princess"))
-        //{
-        //    SceneManager.LoadScene("GameOver");
+
+        
+        if (other.gameObject.CompareTag("Princess"))
+        {
+            SceneManager.LoadScene("WinScenes");
 
 
-        //}
+        }
 
        
 
