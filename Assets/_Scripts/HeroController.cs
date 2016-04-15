@@ -194,6 +194,10 @@ public class HeroController: MonoBehaviour {
             this._pickupSound.Play();
             Destroy(other.gameObject);
             this.gameController.ScoreValue += 10;
+           
+
+
+
         }
 
         if (other.gameObject.CompareTag("End"))
