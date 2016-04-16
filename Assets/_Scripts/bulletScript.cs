@@ -5,7 +5,7 @@ public class bulletScript : MonoBehaviour {
     float speed;
 	// Use this for initialization
 	void Start () {
-        speed = 80f;
+        speed = 150f;
 	}
 	
 	// Update is called once per frame
@@ -24,7 +24,37 @@ public class bulletScript : MonoBehaviour {
     {
         if (other.gameObject.CompareTag("Enemy"))
         {     
-            Destroy(other.gameObject);   
+            Destroy(other.gameObject);
+            Destroy(gameObject);
         }
+        if (other.gameObject.CompareTag("Ground"))
+        {
+            Destroy(gameObject);
+        }
+        if (other.gameObject.CompareTag("SpikedWheel"))
+        {
+            Destroy(gameObject);
+        }
+        if (other.gameObject.CompareTag("Crate"))
+        {
+            Destroy(gameObject);
+        }
+        if (other.gameObject.CompareTag("Torch"))
+        {
+            Destroy(gameObject);
+        }
+        if (other.gameObject.CompareTag("Player"))
+        {
+            Destroy(gameObject);
+        }
+        if (other.gameObject.CompareTag("Princess"))
+        {
+            Destroy(gameObject);
+        }
+        if (other.gameObject.CompareTag("End2"))
+        {
+            Destroy(gameObject);
+        }
+    
     }
 }
