@@ -3,15 +3,17 @@ using System.Collections;
 
 public class Canvas : MonoBehaviour {
 
+    
 	// Use this for initialization
 	void Start () {
 	
 	}
 
-    void Awake()
+    /*void Awake()
     {
-        DontDestroyOnLoad(transform.gameObject);
+        DontDestroyOnLoad(gameObject);
     }
+     * */
 	// Update is called once per frame
 	void Update () {
 	

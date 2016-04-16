@@ -214,13 +214,14 @@ public class HeroController: MonoBehaviour {
 
         if (other.gameObject.CompareTag("End"))
         {
-            SceneManager.LoadScene("Lvl2");
+            SceneManager.LoadScene("Lv1ScoreScene");
             
            
         }
+
         if (other.gameObject.CompareTag("End2"))
         {
-            SceneManager.LoadScene("Lvl3");
+            SceneManager.LoadScene("Lv2ScoreScene");
 
 
         }

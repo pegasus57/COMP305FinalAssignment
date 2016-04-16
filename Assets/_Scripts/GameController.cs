@@ -103,12 +103,12 @@ public class GameController : MonoBehaviour
 
     }
 
-    void Awake()
+    /*void Awake()
     {
         
         DontDestroyOnLoad(gameObject);
 
-    }
+    }*/
 
     //private methods=========================
 

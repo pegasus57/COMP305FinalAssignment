@@ -52,6 +52,16 @@ public class MenuController : MonoBehaviour {
         SceneManager.LoadScene("Instructions");
     }
 
+    public void Lv2ButtonClick()
+    {
+        SceneManager.LoadScene("Lvl2");
+    }
+
+    public void Lv3ButtonClick()
+    {
+        SceneManager.LoadScene("Lvl3");
+    }
+
     public void QuitButtonClick()
     {
         Application.Quit();
