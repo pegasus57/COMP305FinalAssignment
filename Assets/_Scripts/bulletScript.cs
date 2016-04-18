@@ -3,9 +3,19 @@ using System.Collections;
 
 public class bulletScript : MonoBehaviour {
     float speed;
+
+    private AudioSource[] _audioSources;
+    private AudioSource _hurtSound;
+
+
+
 	// Use this for initialization
 	void Start () {
         speed = 150f;
+
+        // Setup AudioSources
+        this._audioSources = gameObject.GetComponents<AudioSource>();
+        this._hurtSound = this._audioSources[0];
 	}
 	
 	// Update is called once per frame
@@ -23,9 +33,11 @@ public class bulletScript : MonoBehaviour {
     void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Enemy"))
-        {     
+        {
+            this._hurtSound.Play();
             Destroy(other.gameObject);
             Destroy(gameObject);
+            
         }
         if (other.gameObject.CompareTag("Ground"))
         {

@@ -18,6 +18,9 @@
  */
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using System.Collections;
+
 
 using System.Collections;
 // VELOCITY RANGE UTILITY Class +++++++++++++++++++++++
@@ -44,6 +47,7 @@ public class HeroController: MonoBehaviour {
     public GameController gameController;
     public GameObject Bullet;
     public GameObject BulletPosition;
+    public Text HighScoreLabel;
 
     // PRIVATE INSTANCE VARIABLES
     private Animator _animator;
@@ -58,6 +62,7 @@ public class HeroController: MonoBehaviour {
     private AudioSource _pickupSound;
     private AudioSource _DeadSound;
     private AudioSource _hurtSound;
+    private AudioSource _hitSound;
     private GameObject _weapon1;
     
 
@@ -87,7 +92,9 @@ public class HeroController: MonoBehaviour {
         this._jumpSound = this._audioSources[0];
         this._pickupSound = this._audioSources[1];
         this._DeadSound = this._audioSources[2];
-        this._hurtSound = this._audioSources[3];
+       
+        this._hitSound = this._audioSources[3];
+        this._hurtSound = this._audioSources[5];
 	
 	}
 	
@@ -98,6 +105,7 @@ public class HeroController: MonoBehaviour {
         {
             GameObject bullet = (GameObject)Instantiate(Bullet);
             bullet.transform.position = BulletPosition.transform.position;
+            this._hitSound.Play();
 
         }
 
@@ -120,9 +128,7 @@ public class HeroController: MonoBehaviour {
             Debug.Log("1111");
 
        
-        //if (this._isGrounded)
-        //{
-        //    Debug.Log("1111");
+        
 
 
         }
@@ -215,7 +221,6 @@ public class HeroController: MonoBehaviour {
         if (other.gameObject.CompareTag("End"))
         {
             SceneManager.LoadScene("Lv1ScoreScene");
-            
            
         }
 

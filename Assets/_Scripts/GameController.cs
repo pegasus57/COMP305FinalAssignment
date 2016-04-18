@@ -121,7 +121,7 @@ public class GameController : MonoBehaviour
 
 
         //this.Good.gameObject.SetActive(false);
-        //this.HighScoreLabel.gameObject.SetActive(false);
+        this.HighScoreLabel.gameObject.SetActive(false);
         //this.RestartButton.gameObject.SetActive(false);
 
 
