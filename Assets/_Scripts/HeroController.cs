@@ -15,6 +15,11 @@
  *                   Apr 03th, 2016 - Added Information Scene
  *                   Apr 06th, 2016 - Added door to go to next level
  *                   Apr 07th, 2016 - Added princess. Find errors
+ *                   Apr 10th, 2016 - Added weapon
+ *                   Apr 12th, 2016 - Changed map 
+ *                   Apr 15th, 2016 - Added bullet system
+ *                   Apr 18th, 2016 - Added loading scenes
+ *                   Apr 19th, 2016 - Fixed all errors
  */
 using UnityEngine;
 using UnityEngine.SceneManagement;
