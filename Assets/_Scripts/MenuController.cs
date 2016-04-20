@@ -70,6 +70,7 @@ public class MenuController : MonoBehaviour {
     public void QuitButtonClick()
     {
         Application.Quit();
+
     }
 
     public void BackButtonClick()
